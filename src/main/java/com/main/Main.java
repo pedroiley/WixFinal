@@ -2,7 +2,7 @@ package com.main;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mediator.RESTMediator;
-import com.model.Item;
+import com.model.Job;
 import com.model.ResponseBody;
 
 import java.io.IOException;
@@ -17,16 +17,17 @@ public class Main {
 
         ObjectMapper objectMapper = new ObjectMapper();
         ResponseBody responseBody = objectMapper.readValue(output, ResponseBody.class);
-        List<Item> items = new ArrayList<>();
-        items.addAll(responseBody.getJobs());
+        List<Job> jobs = new ArrayList<>();
+        jobs.addAll(responseBody.getJobs());
 
 
 
 
-        System.out.println(responseBody.getSubmissionUrl());
+        System.out.println(responseBody.getSubmissionURL());
         System.out.println(responseBody.getJobs());
-        System.out.println(items.get(0).getId());
-        System.out.println(items.get(1).getData().get(0).get(0).get("value").get("number"));
+        System.out.println(jobs.get(0).getID());
+        System.out.println(jobs.get(1).getData().get(0).get(0).getValue().getNumber());
+        System.out.println(jobs.get(17).getData().get(0).get(0));
 
 
     }

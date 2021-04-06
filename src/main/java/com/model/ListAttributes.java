@@ -1,16 +1,29 @@
 package com.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListAttributes {
-    private List<Values> listValues = new ArrayList<>();
+    private Values value;
+    private Formula formula;
 
-    public List<Values> getListValues() {
-        return listValues;
-    }
+    @JsonProperty("value")
+    public Values getValue() { return value; }
+    @JsonProperty("value")
+    public void setValue(Values value) { this.value = value; }
 
-    public void setListValues(List<Values> listValues) {
-        this.listValues = listValues;
+    @JsonProperty("formula")
+    public Formula getFormula() { return formula; }
+    @JsonProperty("formula")
+    public void setFormula(Formula value) { this.formula = value; }
+
+    @Override
+    public String toString() {
+        return "ListAttributes{" +
+                "value=" + value +
+                ", formula=" + formula +
+                '}';
     }
 }

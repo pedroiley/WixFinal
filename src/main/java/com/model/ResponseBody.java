@@ -1,26 +1,29 @@
 package com.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ResponseBody {
+    private String submissionURL;
+    private List<Job> jobs;
 
-    private String submissionUrl;
-    private List<Item> jobs = new ArrayList<>();
+    @JsonProperty("submissionUrl")
+    public String getSubmissionURL() { return submissionURL; }
+    @JsonProperty("submissionUrl")
+    public void setSubmissionURL(String value) { this.submissionURL = value; }
 
-    public String getSubmissionUrl() {
-        return submissionUrl;
-    }
+    @JsonProperty("jobs")
+    public List<Job> getJobs() { return jobs; }
+    @JsonProperty("jobs")
+    public void setJobs(List<Job> value) { this.jobs = value; }
 
-    public void setSubmissionUrl(String submissionUrl) {
-        this.submissionUrl = submissionUrl;
-    }
-
-    public List<Item> getJobs() {
-        return jobs;
-    }
-
-    public void setJobs(List<Item> jobs) {
-        this.jobs = jobs;
+    @Override
+    public String toString() {
+        return "ResponseBody{" +
+                "submissionURL='" + submissionURL + '\'' +
+                ", jobs=" + jobs +
+                '}';
     }
 }
