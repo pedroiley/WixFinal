@@ -2,14 +2,12 @@ package com.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 
 public class Job {
     private String id;
-    private List<List<ListAttributes>> data;
+    private List<List<Data>> data;
 
     @JsonProperty("id")
     public String getID() { return id; }
@@ -17,9 +15,9 @@ public class Job {
     public void setID(String value) { this.id = value; }
 
     @JsonProperty("data")
-    public List<List<ListAttributes>> getData() { return data; }
+    public List<List<Data>> getData() { return data; }
     @JsonProperty("data")
-    public void setData(List<List<ListAttributes>> value) { this.data = value; }
+    public void setData(List<List<Data>> value) { this.data = value; }
 
     @Override
     public String toString() {

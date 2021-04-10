@@ -77,6 +77,15 @@ public class Formula {
     @JsonProperty("concat")
     public void setConcat(List<Concat> value) { this.concat = value; }
 
+    public double getTheFormula(double doub, double doub1){
+        double result = 0;
+        if(getSum() != null){
+            result = doub + doub1;
+
+        }
+        return result;
+    }
+
     @Override
     public String toString() {
         return "Formula{" +

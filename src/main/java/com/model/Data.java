@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAttributes {
+public class Data {
     private Values value;
     private Formula formula;
 
@@ -21,7 +21,7 @@ public class ListAttributes {
 
     @Override
     public String toString() {
-        return "ListAttributes{" +
+        return "Data{" +
                 "value=" + value +
                 ", formula=" + formula +
                 '}';

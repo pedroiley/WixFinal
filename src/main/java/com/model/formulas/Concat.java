@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Concat {
     private ConcatValue value;
 
+
     @JsonProperty("value")
     public ConcatValue getValue() { return value; }
     @JsonProperty("value")
